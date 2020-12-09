@@ -10,7 +10,7 @@ resource "random_id" "instance_id" {
 }
 
 resource "google_compute_instance" "default_vm" {
-  name         = "tcs-vm-${random_id.instance_id.hex}"
+  name         = "ashwin-vm-${random_id.instance_id.hex}"
   machine_type = "e2-standard-2" ## 2vCPU, 8GB RAM
   zone         = "europe-west3-c"
 
