@@ -1,0 +1,20 @@
+{
+  "name": "CloudComputing",
+  "version": "1.0.0",
+  "description": "Cloud Computing - Terraform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AshwinParmar/CloudComputing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AshwinParmar/CloudComputing/issues"
+  },
+  "homepage": "https://github.com/AshwinParmar/CloudComputing#readme"
+}
