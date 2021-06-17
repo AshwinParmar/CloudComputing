@@ -1,13 +1,3 @@
-#locals {
-#  vpc_id           = "vpc-fc13ae96"
-#  subnet_id        = "subnet-7f268033"
-#  ssh_user         = "ubuntu"
-#  key_name         = "devops"
-
-#  # Please update filename if different
-#  private_key_path = "keys/devops.pem"
-#}
-
 provider "aws" {
   region = var.aws_region_id
 
