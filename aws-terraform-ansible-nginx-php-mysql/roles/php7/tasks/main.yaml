@@ -1,0 +1,30 @@
+---
+- name: Add PHP 7 PPA repository
+  become: true
+  apt_repository:
+    repo: 'ppa:ondrej/php'
+- name: Install PHP CLI
+  apt:
+    name: php7.3-cli
+- name: install packages
+  apt:
+    name: ['git', 'mcrypt', 'php{{ PHP_VER }}-curl', 'php{{ PHP_VER }}-fpm', 
+'php{{ PHP_VER }}-intl', 'php{{ PHP_VER }}-json', 'php{{ PHP_VER }}-mcrypt', 'php{{ PHP_VER }}-sqlite3', 'php{{ PHP_VER }}-mysql', 'sqlite3']
+    update_cache: yes
+    state: latest
+
+- name: Verify installed PHP version
+  command: php -r "echo phpversion();"
+  register: php_version
+- debug: msg="{{ php_version.stdout }}"
+- debug: msg="{{ php_version.stderr }}"
+
+#- name: enable php7 mcrypt module
+#  shell: php7enmod mcrypt
+#  args:
+#    creates: /etc/php/{{ PHP_VER }}/cli/conf.d/20-mcrypt.ini
+
+#- name: Restart php{{ PHP_VER }}-fpm
+#  handlers:
+#   - name: Restart php{{ PHP_VER }}-fpm
+#     command: service php{{ PHP_VER }}-fpm restart

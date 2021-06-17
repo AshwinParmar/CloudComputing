@@ -1,0 +1,17 @@
+---
+# terraform plan
+# terraform apply
+# terraform plan
+# ansible-playbook -i <public ip of cloud>, --private-key path/file.pem nginx.yaml
+- name: Install Nginx
+  hosts: all
+  remote_user: ubuntu
+  become: true
+  vars:
+    PHP_VER: 7.3
+    
+  roles:
+  - php7
+  - mysql
+  - nginx
+  - app-deploy

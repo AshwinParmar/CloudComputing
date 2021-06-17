@@ -1,0 +1,13 @@
+# Files
+.pem
+.ppk
+.tfstate*
+.terraform
+.tfstate.backup
+
+# Directory & Files
+aws-terraform-ansible-nginx-php-mysql/keys/*.pem
+aws-terraform-ansible-nginx-php-mysql/*.tfstate*
+aws-terraform-ansible-nginx-php-mysql/*.terraform
+aws-terraform-ansible-nginx-php-mysql/.terraform
+aws-terraform-ansible-nginx-php-mysql/.terraform/*
