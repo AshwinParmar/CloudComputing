@@ -1,0 +1,11 @@
+---
+- name: Install MySQL DB server
+  become: true
+  apt:
+    name: mysql-server
+    state: latest
+- name: Verify MySQL DB Server Version
+  command: mysql --version
+  register: mysql_version
+- debug: msg="{{ mysql_version.stdout }}"
+- debug: msg="{{ mysql_version.stderr }}"

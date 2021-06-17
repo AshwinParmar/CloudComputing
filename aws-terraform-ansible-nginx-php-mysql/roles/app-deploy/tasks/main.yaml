@@ -1,0 +1,21 @@
+---
+- name: index.html copy at /usr/share/nginx/html
+  vars:
+    MyMessage: "World of Ansible, Terraform and AWS!"
+  template:
+    src: ./www/index.html.j2
+    dest: /usr/share/nginx/html/index.html
+
+- name: index.html copy at /var/www/html
+  vars:
+    MyMessage: "World of Ansible, Terraform and AWS!"
+  template:
+    src: ./www/index.html.j2
+    dest: /var/www/html/index.html
+
+- name: index.php copy at /var/www/html
+  vars:
+    MyMessage: "World of Ansible, Terraform and AWS!"
+  template:
+    src: ./www/index.php.j2
+    dest: /var/www/html/index.php
