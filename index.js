@@ -1,7 +1,14 @@
-exports.handler = async (event) => {
-    const response = {
-        statusCode: 200,
-        body: JSON.stringify('Hello from Lambda and Github!'),
-    };
-    return response;
-};
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  console.log('Hello world received a request.');
+
+  const target = process.env.TARGET || 'World';
+  res.send(`Hello ${target}!`);
+});
+
+const port = process.env.PORT || 8080;
+app.listen(port, () => {
+  console.log('Hello world listening on port', port);
+});
