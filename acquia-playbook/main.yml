@@ -1,0 +1,18 @@
+---
+- hosts: 02dev
+  become: false
+
+  vars_files:
+    - vars.yml
+
+  pre_tasks:
+    - name: Pre deployment
+      shell: echo "Pre - Hello {{ hello }}"
+      register: _output_pre_tasks
+    - debug: var=_output_pre_tasks.stdout_lines
+
+  tasks:
+    - name: Just say Hello.
+      shell: echo "Tasks - Hello {{ hello }}!"
+      register: _output_tasks
+    - debug: var=_output_tasks.stdout_lines

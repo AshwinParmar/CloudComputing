@@ -1,0 +1,5 @@
+---
+download_dir: /tmp
+solr_dir: /opt/
+solr_version: 8.8.2
+solr_checksum: "sha512:2f0affa8ac1e913ec83c2c4b8dffd6b262140478d5aa33203ac01fd5efb695eb9b1661138ce0c549b050fa0aadeb0912b5838b94703e1cca74ecfacbb57bbaee"

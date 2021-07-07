@@ -1,0 +1,2 @@
+[02dev]
+localhost	ansible_connection=ssh 	ansible_user=localhost.02dev
